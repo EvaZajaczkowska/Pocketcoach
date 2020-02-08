@@ -3,7 +3,12 @@ import './index.css';
 
 function RowOffer(props) {
     return(
-      <tr>RowOffer</tr>
+      <tr>
+        <th scope="row">1</th>
+            <td>01.01.2020</td>
+            <td>1</td>
+            <td>1234</td>
+      </tr>
     );
 }
 
