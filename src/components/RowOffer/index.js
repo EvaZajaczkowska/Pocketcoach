@@ -4,10 +4,10 @@ import './index.css';
 function RowOffer(props) {
     return(
       <tr>
-        <th scope="row">1</th>
-            <td>01.01.2020</td>
-            <td>1</td>
-            <td>1234</td>
+          <th scope="row">{props.id}</th>
+          <td>{props.date}</td>
+          <td>{props.amount}</td>
+          <td>{props.bid}</td>
       </tr>
     );
 }

@@ -8,6 +8,30 @@ class Offers extends React.Component {
       offers: {}
     };
   }
+
+  componentDidMount() {
+    this.generateData(10);
+  }
+
+  generateData = num => {
+    const dd = new Date();
+    const offers = this.state.offers || {};
+    const initialNum = Object.keys(offers).length || 0;
+
+    for (let i = initialNum; i < initialNum + num; i++) {
+      offers[i] = {
+        id: i,
+        date: dd.getMinutes(),
+        amount: Math.random() * 10,
+        bid: 9.5 + Math.random()
+      };
+    }
+
+    this.setState({
+      offers
+    });
+  };
+
   render() {
     const { offers } = this.state;
 
