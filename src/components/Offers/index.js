@@ -11,6 +11,7 @@ class Offers extends React.Component {
 
   componentDidMount() {
     this.generateData(10);
+    this.insertNewRows();
   }
 
   generateData = num => {
@@ -30,6 +31,12 @@ class Offers extends React.Component {
     this.setState({
       offers
     });
+  };
+
+  insertNewRows = () => {
+    setInterval(() => {
+      this.generateData(1);
+    }, 5000);
   };
 
   render() {
