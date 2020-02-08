@@ -3,7 +3,7 @@ import './index.css';
 
 function RowOffer(props) {
     return(
-      <tr>
+      <tr className="row">
           <th scope="row">{props.id}</th>
           <td>{props.date}</td>
           <td>{props.amount}</td>
